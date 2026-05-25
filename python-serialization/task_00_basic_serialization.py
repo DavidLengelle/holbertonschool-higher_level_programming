@@ -12,7 +12,7 @@ def serialize_and_save_to_file(data, filename):
 
 
 def load_and_deserialize(filename):
-    """Load a JSON file and deserialize it into a dictionary"""
+    """Load a JSON file and deserialize it into a dictionary."""
 
     with open(filename, mode="r") as f:
         data = json.load(f)
