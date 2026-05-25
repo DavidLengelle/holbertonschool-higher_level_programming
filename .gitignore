@@ -1,0 +1,10 @@
+# Fichiers generes par les tests
+data.json
+
+# Cache Python
+__pycache__/
+*.pyc
+
+# Fichiers de test locaux
+test.py
+main.py
