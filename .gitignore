@@ -1,5 +1,6 @@
 # Fichiers generes par les tests
 data.json
+data.csv
 *.pkl
 
 # Cache Python
