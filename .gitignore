@@ -2,6 +2,7 @@
 data.json
 data.csv
 data.xml
+posts.csv
 *.pkl
 
 # Cache Python
