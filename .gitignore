@@ -9,6 +9,9 @@ posts.csv
 __pycache__/
 *.pyc
 
+# Environnement virtuel
+venv/
+
 # Fichiers de test locaux
 test.py
 main.py
