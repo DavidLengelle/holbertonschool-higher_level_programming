@@ -1,0 +1,196 @@
+/* Variables de couleurs : palette sobre (gris, blanc + une couleur d'accent) */
+:root {
+  --accent: #2f6fed;       /* couleur d'accent unique (bleu) */
+  --bg: #f4f5f7;           /* fond de page */
+  --surface: #ffffff;      /* fond des blocs */
+  --border: #d9dce1;       /* bordures */
+  --text: #1f2329;         /* texte principal */
+  --text-soft: #5c6470;    /* texte secondaire */
+}
+
+/* Réinitialisation simple */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.4;
+  padding: 16px;
+}
+
+/* Conteneur centré et limité en largeur pour rester lisible */
+.app {
+  max-width: 520px;
+  margin: 0 auto;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 20px;
+}
+
+h1 {
+  font-size: 1.4rem;
+  margin-bottom: 16px;
+}
+
+h2 {
+  font-size: 1rem;
+  color: var(--text-soft);
+  margin-bottom: 8px;
+}
+
+/* --- Liste des dés --- */
+.dice-list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-bottom: 16px;
+}
+
+/* Une ligne de dé : nom à gauche, contrôles de quantité à droite */
+.dice-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 8px 12px;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+}
+
+.dice-name {
+  font-weight: 600;
+}
+
+/* Groupe des boutons - / + et du champ quantité */
+.qty-group {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.qty-btn {
+  width: 32px;
+  height: 32px;
+  border: 1px solid var(--border);
+  background: var(--surface);
+  border-radius: 6px;
+  font-size: 1.1rem;
+  cursor: pointer;
+  color: var(--text);
+}
+
+.qty-btn:hover {
+  background: var(--bg);
+}
+
+.qty-input {
+  width: 48px;
+  height: 32px;
+  text-align: center;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  font-size: 1rem;
+}
+
+/* --- Ligne du bonus --- */
+.bonus-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 16px;
+  padding: 8px 12px;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+}
+
+.bonus-row input {
+  width: 72px;
+  height: 32px;
+  text-align: center;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  font-size: 1rem;
+}
+
+/* --- Boutons d'action --- */
+.actions {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 16px;
+}
+
+.btn-primary,
+.btn-secondary {
+  flex: 1;
+  height: 42px;
+  border-radius: 6px;
+  font-size: 1rem;
+  cursor: pointer;
+  border: 1px solid var(--border);
+}
+
+.btn-primary {
+  background: var(--accent);
+  color: #fff;
+  border-color: var(--accent);
+}
+
+.btn-primary:hover {
+  opacity: 0.9;
+}
+
+.btn-secondary {
+  background: var(--surface);
+  color: var(--text);
+}
+
+.btn-secondary:hover {
+  background: var(--bg);
+}
+
+/* --- Résultat courant --- */
+.result {
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 12px;
+  margin-bottom: 16px;
+}
+
+.result-details {
+  color: var(--text-soft);
+  font-size: 0.95rem;
+  margin-bottom: 8px;
+  white-space: pre-line; /* respecte les retours à la ligne du détail */
+}
+
+/* Total mis en valeur : gros et en couleur d'accent */
+.result-total {
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
+.result-total span {
+  font-size: 1.8rem;
+  color: var(--accent);
+}
+
+/* --- Historique --- */
+.history ul {
+  list-style: none;
+}
+
+.history li {
+  font-size: 0.9rem;
+  color: var(--text-soft);
+  padding: 6px 0;
+  border-bottom: 1px solid var(--border);
+}
+
+.history li:last-child {
+  border-bottom: none;
+}
